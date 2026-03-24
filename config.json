@@ -3,7 +3,8 @@
   "output_file": "model_prices_and_context_window.json",
   "hash_file": "model_prices_and_context_window.sha256",
   "sync_mode": "additive",
-  "update_existing": false,
+  "update_existing": true,
+  "price_multiplier": 1.5,
   "prefix_filters": [
     "claude-",
     "gpt-",

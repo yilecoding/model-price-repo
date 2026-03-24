@@ -51,6 +51,16 @@ def load_config(path: str) -> dict:
     if cfg["sync_mode"] not in ("additive", "full"):
         log.error("Invalid sync_mode '%s'; must be 'additive' or 'full'", cfg["sync_mode"])
         sys.exit(1)
+    multiplier_cfg = cfg.get("price_multiplier")
+    if multiplier_cfg is not None:
+        try:
+            multiplier = Decimal(str(multiplier_cfg))
+        except Exception:
+            log.error("Invalid price_multiplier '%s'; must be a number", multiplier_cfg)
+            sys.exit(1)
+        if multiplier <= 0:
+            log.error("Invalid price_multiplier '%s'; must be > 0", multiplier_cfg)
+            sys.exit(1)
     return cfg
 
 
@@ -236,6 +246,44 @@ def fill_cache_1hr_pricing(data: dict, config: dict) -> int:
     return count
 
 
+def scale_price_fields(value, multiplier: Decimal, price_context: bool = False):
+    """Recursively scale numeric pricing fields while leaving non-price numbers intact."""
+    if isinstance(value, dict):
+        for key, item in value.items():
+            next_price_context = price_context or ("cost" in key)
+            value[key] = scale_price_fields(item, multiplier, next_price_context)
+        return value
+
+    if isinstance(value, list):
+        for index, item in enumerate(value):
+            value[index] = scale_price_fields(item, multiplier, price_context)
+        return value
+
+    if price_context and isinstance(value, (int, float)) and not isinstance(value, bool):
+        return float(Decimal(str(value)) * multiplier)
+
+    return value
+
+
+def apply_price_multiplier(data: dict, config: dict, label: str) -> int:
+    """Scale price fields in-place when price_multiplier is configured."""
+    multiplier_cfg = config.get("price_multiplier")
+    if multiplier_cfg is None:
+        return 0
+
+    multiplier = Decimal(str(multiplier_cfg))
+    scaled_count = 0
+
+    for key, value in data.items():
+        if not isinstance(value, dict):
+            continue
+        scale_price_fields(value, multiplier)
+        scaled_count += 1
+
+    log.info("Applied price multiplier %s to %d %s model entries.", multiplier, scaled_count, label)
+    return scaled_count
+
+
 # ---------------------------------------------------------------------------
 # Output
 # ---------------------------------------------------------------------------
@@ -299,6 +347,10 @@ def main() -> None:
     # 4. Filter
     filtered = filter_upstream(upstream, config)
 
+    # 4.1 Apply pricing multiplier to fresh upstream data before merging so
+    # additive syncs do not repeatedly rescale already stored output.
+    upstream_scaled_count = apply_price_multiplier(filtered, config, "upstream")
+
     # 5. Merge
     merged, stats = merge_models(
         existing,
@@ -322,7 +374,8 @@ def main() -> None:
     cache_1hr_count = fill_cache_1hr_pricing(merged, config)
 
     # 8. Custom models
-    custom = config.get("custom_models", {})
+    custom = copy.deepcopy(config.get("custom_models", {}))
+    custom_scaled_count = apply_price_multiplier(custom, config, "custom")
     if custom:
         merged = apply_custom_models(merged, custom)
 
@@ -338,6 +391,7 @@ def main() -> None:
     log.info("Aliases:   %d", len(aliases))
     log.info("Cache 1hr auto-filled: %d", cache_1hr_count)
     log.info("Custom:    %d", len(custom))
+    log.info("Price multiplier upstream/custom: %d/%d", upstream_scaled_count, custom_scaled_count)
 
     # Machine-readable output for CI
     print(f"CHANGED={str(changed).lower()}")

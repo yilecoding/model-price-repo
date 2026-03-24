@@ -10,7 +10,8 @@ A GitHub Actions workflow runs every 10 minutes (and on manual trigger):
 2. Filters models by the prefix rules in `config.json`
 3. Merges new models into the existing output (additive — never removes)
 4. Applies alias mappings and custom model definitions
-5. Writes the output JSON + SHA-256 hash, commits only if content changed
+5. Optionally applies a configurable price multiplier to pricing fields
+6. Writes the output JSON + SHA-256 hash, commits only if content changed
 
 ## Configuration
 
@@ -23,6 +24,7 @@ All settings live in [`config.json`](config.json):
 | `hash_file` | SHA-256 hash filename for change detection |
 | `sync_mode` | `"additive"` (only add new) or `"full"` (replace each run) |
 | `update_existing` | Whether to update pricing data for models already in the output |
+| `price_multiplier` | Multiplies all pricing fields whose keys contain `cost` before writing output |
 | `prefix_filters` | List of prefixes — a model key must start with one to be included |
 | `exclude_patterns` | Substring patterns to exclude (applied before prefix matching) |
 | `aliases` | Map alias model keys to existing source models (deep copy pricing) |
@@ -66,6 +68,8 @@ python3 scripts/sync_prices.py --config config.json --repo-root .
 ```
 
 No pip dependencies — uses Python standard library only.
+
+With `"price_multiplier": 1.5`, the repo stores JSON prices at 1.5x the upstream source price. The multiplier is applied to fresh upstream data before merge so additive syncs do not compound the markup on every run.
 
 ## CRS integration
 
