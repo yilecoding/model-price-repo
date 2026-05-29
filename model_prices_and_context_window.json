@@ -25,8 +25,7 @@
     "supports_response_schema": true,
     "supports_tool_choice": true,
     "supports_vision": true,
-    "supports_web_search": true,
-    "tool_use_system_prompt_tokens": 159
+    "supports_web_search": true
   },
   "claude-3-haiku-20240307": {
     "cache_creation_input_token_cost": 4.5e-07,
@@ -44,8 +43,7 @@
     "supports_prompt_caching": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
-    "supports_vision": true,
-    "tool_use_system_prompt_tokens": 264
+    "supports_vision": true
   },
   "claude-3-opus-20240229": {
     "cache_creation_input_token_cost": 2.8125e-05,
@@ -64,8 +62,7 @@
     "supports_prompt_caching": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
-    "supports_vision": true,
-    "tool_use_system_prompt_tokens": 395
+    "supports_vision": true
   },
   "claude-4-opus-20250514": {
     "cache_creation_input_token_cost": 2.8125e-05,
@@ -91,8 +88,7 @@
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
-    "supports_vision": true,
-    "tool_use_system_prompt_tokens": 159
+    "supports_vision": true
   },
   "claude-4-sonnet-20250514": {
     "cache_creation_input_token_cost": 5.625e-06,
@@ -123,8 +119,7 @@
     "supports_response_schema": true,
     "supports_tool_choice": true,
     "supports_vision": true,
-    "supports_web_search": true,
-    "tool_use_system_prompt_tokens": 159
+    "supports_web_search": true
   },
   "claude-haiku-4-5": {
     "cache_creation_input_token_cost": 1.875e-06,
@@ -192,8 +187,7 @@
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
-    "supports_vision": true,
-    "tool_use_system_prompt_tokens": 159
+    "supports_vision": true
   },
   "claude-opus-4-1-20250805": {
     "cache_creation_input_token_cost": 2.8125e-05,
@@ -220,8 +214,7 @@
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
-    "supports_vision": true,
-    "tool_use_system_prompt_tokens": 159
+    "supports_vision": true
   },
   "claude-opus-4-20250514": {
     "cache_creation_input_token_cost": 2.8125e-05,
@@ -248,8 +241,7 @@
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
-    "supports_vision": true,
-    "tool_use_system_prompt_tokens": 159
+    "supports_vision": true
   },
   "claude-opus-4-5": {
     "cache_creation_input_token_cost": 9.375e-06,
@@ -270,14 +262,13 @@
     "supports_assistant_prefill": true,
     "supports_computer_use": true,
     "supports_function_calling": true,
-    "supports_minimal_reasoning_effort": true,
+    "supports_output_config": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
-    "supports_vision": true,
-    "tool_use_system_prompt_tokens": 159
+    "supports_vision": true
   },
   "claude-opus-4-5-20251101": {
     "cache_creation_input_token_cost": 9.375e-06,
@@ -298,14 +289,13 @@
     "supports_assistant_prefill": true,
     "supports_computer_use": true,
     "supports_function_calling": true,
-    "supports_minimal_reasoning_effort": true,
+    "supports_output_config": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
-    "supports_vision": true,
-    "tool_use_system_prompt_tokens": 159
+    "supports_vision": true
   },
   "claude-opus-4-6": {
     "cache_creation_input_token_cost": 9.375e-06,
@@ -332,15 +322,13 @@
     "supports_computer_use": true,
     "supports_function_calling": true,
     "supports_max_reasoning_effort": true,
-    "supports_minimal_reasoning_effort": true,
     "supports_output_config": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
-    "supports_vision": true,
-    "tool_use_system_prompt_tokens": 346
+    "supports_vision": true
   },
   "claude-opus-4-6-20260205": {
     "cache_creation_input_token_cost": 9.375e-06,
@@ -367,15 +355,13 @@
     "supports_computer_use": true,
     "supports_function_calling": true,
     "supports_max_reasoning_effort": true,
-    "supports_minimal_reasoning_effort": true,
     "supports_output_config": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
-    "supports_vision": true,
-    "tool_use_system_prompt_tokens": 346
+    "supports_vision": true
   },
   "claude-opus-4-6-thinking": {
     "cache_creation_input_token_cost": 9.375e-06,
@@ -402,15 +388,13 @@
     "supports_computer_use": true,
     "supports_function_calling": true,
     "supports_max_reasoning_effort": true,
-    "supports_minimal_reasoning_effort": true,
     "supports_output_config": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
-    "supports_vision": true,
-    "tool_use_system_prompt_tokens": 346
+    "supports_vision": true
   },
   "claude-opus-4-7": {
     "cache_creation_input_token_cost": 9.375e-06,
@@ -437,7 +421,6 @@
     "supports_computer_use": true,
     "supports_function_calling": true,
     "supports_max_reasoning_effort": true,
-    "supports_minimal_reasoning_effort": true,
     "supports_output_config": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
@@ -445,8 +428,7 @@
     "supports_response_schema": true,
     "supports_tool_choice": true,
     "supports_vision": true,
-    "supports_xhigh_reasoning_effort": true,
-    "tool_use_system_prompt_tokens": 346
+    "supports_xhigh_reasoning_effort": true
   },
   "claude-opus-4-7-20260416": {
     "cache_creation_input_token_cost": 9.375e-06,
@@ -473,7 +455,6 @@
     "supports_computer_use": true,
     "supports_function_calling": true,
     "supports_max_reasoning_effort": true,
-    "supports_minimal_reasoning_effort": true,
     "supports_output_config": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
@@ -481,8 +462,41 @@
     "supports_response_schema": true,
     "supports_tool_choice": true,
     "supports_vision": true,
-    "supports_xhigh_reasoning_effort": true,
-    "tool_use_system_prompt_tokens": 346
+    "supports_xhigh_reasoning_effort": true
+  },
+  "claude-opus-4-8": {
+    "cache_creation_input_token_cost": 9.375e-06,
+    "cache_creation_input_token_cost_above_1hr": 1.5e-05,
+    "cache_read_input_token_cost": 7.5e-07,
+    "input_cost_per_token": 7.5e-06,
+    "litellm_provider": "anthropic",
+    "max_input_tokens": 1000000,
+    "max_output_tokens": 128000,
+    "max_tokens": 128000,
+    "mode": "chat",
+    "output_cost_per_token": 3.75e-05,
+    "provider_specific_entry": {
+      "fast": 2.0,
+      "us": 1.1
+    },
+    "search_context_cost_per_query": {
+      "search_context_size_high": 0.015,
+      "search_context_size_low": 0.015,
+      "search_context_size_medium": 0.015
+    },
+    "supports_adaptive_thinking": true,
+    "supports_assistant_prefill": false,
+    "supports_computer_use": true,
+    "supports_function_calling": true,
+    "supports_max_reasoning_effort": true,
+    "supports_output_config": true,
+    "supports_pdf_input": true,
+    "supports_prompt_caching": true,
+    "supports_reasoning": true,
+    "supports_response_schema": true,
+    "supports_tool_choice": true,
+    "supports_vision": true,
+    "supports_xhigh_reasoning_effort": true
   },
   "claude-sonnet-4-20250514": {
     "cache_creation_input_token_cost": 5.625e-06,
@@ -513,8 +527,7 @@
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
-    "supports_vision": true,
-    "tool_use_system_prompt_tokens": 159
+    "supports_vision": true
   },
   "claude-sonnet-4-5": {
     "cache_creation_input_token_cost": 5.625e-06,
@@ -544,8 +557,7 @@
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
-    "supports_vision": true,
-    "tool_use_system_prompt_tokens": 346
+    "supports_vision": true
   },
   "claude-sonnet-4-5-20250929": {
     "cache_creation_input_token_cost": 5.625e-06,
@@ -576,8 +588,7 @@
     "supports_response_schema": true,
     "supports_tool_choice": true,
     "supports_vision": true,
-    "supports_web_search": true,
-    "tool_use_system_prompt_tokens": 346
+    "supports_web_search": true
   },
   "claude-sonnet-4-5-20250929-v1:0": {
     "cache_creation_input_token_cost": 5.625e-06,
@@ -602,8 +613,7 @@
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
-    "supports_vision": true,
-    "tool_use_system_prompt_tokens": 159
+    "supports_vision": true
   },
   "claude-sonnet-4-6": {
     "cache_creation_input_token_cost": 5.625e-06,
@@ -626,15 +636,13 @@
     "supports_computer_use": true,
     "supports_function_calling": true,
     "supports_max_reasoning_effort": true,
-    "supports_minimal_reasoning_effort": true,
     "supports_output_config": true,
     "supports_pdf_input": true,
     "supports_prompt_caching": true,
     "supports_reasoning": true,
     "supports_response_schema": true,
     "supports_tool_choice": true,
-    "supports_vision": true,
-    "tool_use_system_prompt_tokens": 346
+    "supports_vision": true
   },
   "deepseek-chat": {
     "cache_read_input_token_cost": 4.2e-08,
@@ -2691,6 +2699,8 @@
     "output_cost_per_token": 1.2e-05,
     "output_cost_per_token_batches": 6e-06,
     "output_cost_per_token_priority": 2.1e-05,
+    "regional_processing_uplift_multiplier_eu": 1.1,
+    "regional_processing_uplift_multiplier_us": 1.1,
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/batch",
@@ -2764,6 +2774,8 @@
     "output_cost_per_token": 2.4e-06,
     "output_cost_per_token_batches": 1.2e-06,
     "output_cost_per_token_priority": 4.2e-06,
+    "regional_processing_uplift_multiplier_eu": 1.1,
+    "regional_processing_uplift_multiplier_us": 1.1,
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/batch",
@@ -2837,6 +2849,8 @@
     "output_cost_per_token": 6e-07,
     "output_cost_per_token_batches": 3e-07,
     "output_cost_per_token_priority": 1.2e-06,
+    "regional_processing_uplift_multiplier_eu": 1.1,
+    "regional_processing_uplift_multiplier_us": 1.1,
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/batch",
@@ -2908,6 +2922,8 @@
     "output_cost_per_token": 1.5e-05,
     "output_cost_per_token_batches": 7.5e-06,
     "output_cost_per_token_priority": 2.55e-05,
+    "regional_processing_uplift_multiplier_eu": 1.1,
+    "regional_processing_uplift_multiplier_us": 1.1,
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -2949,6 +2965,8 @@
     "mode": "chat",
     "output_cost_per_token": 1.5e-05,
     "output_cost_per_token_batches": 7.5e-06,
+    "regional_processing_uplift_multiplier_eu": 1.1,
+    "regional_processing_uplift_multiplier_us": 1.1,
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -2970,6 +2988,8 @@
     "mode": "chat",
     "output_cost_per_token": 1.5e-05,
     "output_cost_per_token_batches": 7.5e-06,
+    "regional_processing_uplift_multiplier_eu": 1.1,
+    "regional_processing_uplift_multiplier_us": 1.1,
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -3045,6 +3065,8 @@
     "output_cost_per_token": 9e-07,
     "output_cost_per_token_batches": 4.5e-07,
     "output_cost_per_token_priority": 1.5e-06,
+    "regional_processing_uplift_multiplier_eu": 1.1,
+    "regional_processing_uplift_multiplier_us": 1.1,
     "supports_function_calling": true,
     "supports_parallel_function_calling": true,
     "supports_pdf_input": true,
@@ -3428,6 +3450,8 @@
     "output_cost_per_token": 1.5e-05,
     "output_cost_per_token_flex": 7.5e-06,
     "output_cost_per_token_priority": 3e-05,
+    "regional_processing_uplift_multiplier_eu": 1.1,
+    "regional_processing_uplift_multiplier_us": 1.1,
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/batch",
@@ -3618,6 +3642,8 @@
     "output_cost_per_token": 3e-06,
     "output_cost_per_token_flex": 1.5e-06,
     "output_cost_per_token_priority": 5.4e-06,
+    "regional_processing_uplift_multiplier_eu": 1.1,
+    "regional_processing_uplift_multiplier_us": 1.1,
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/batch",
@@ -3702,6 +3728,8 @@
     "mode": "chat",
     "output_cost_per_token": 6e-07,
     "output_cost_per_token_flex": 3e-07,
+    "regional_processing_uplift_multiplier_eu": 1.1,
+    "regional_processing_uplift_multiplier_us": 1.1,
     "supported_endpoints": [
       "/v1/chat/completions",
       "/v1/batch",
@@ -3778,6 +3806,8 @@
     "mode": "responses",
     "output_cost_per_token": 0.00018,
     "output_cost_per_token_batches": 9e-05,
+    "regional_processing_uplift_multiplier_eu": 1.1,
+    "regional_processing_uplift_multiplier_us": 1.1,
     "supported_endpoints": [
       "/v1/batch",
       "/v1/responses"
